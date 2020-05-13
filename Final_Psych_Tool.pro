@@ -37,7 +37,7 @@ FORMS += \
     mainwindow.ui \
     menu.ui
 
-#LIBS += opengl32.lib
+LIBS += opengl32.lib
 #LIBS += glu32.lib
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -48,4 +48,29 @@ DISTFILES += \
     Algorithms/Algorithm2/Algorithm_2.frag \
     Algorithms/Algorithm2/Algorithm_2.vert \
     Algorithms/Algorithm3/Algorithm_3.frag \
-    Algorithms/Algorithm3/Algorithm_3.vert
+    Algorithms/Algorithm3/Algorithm_3.vert \
+    build/Linux/Algorithm_2.frag \
+    build/Linux/Algorithm_2.vert \
+    build/Linux/Final_Psych_Tool \
+    build/Windows/Algorithm_2.frag \
+    build/Windows/Algorithm_2.vert \
+    build/Windows/D3Dcompiler_47.dll \
+    build/Windows/Final_Psych_Tool.exe \
+    build/Windows/Qt5Core.dll \
+    build/Windows/Qt5Gui.dll \
+    build/Windows/Qt5Svg.dll \
+    build/Windows/Qt5Widgets.dll \
+    build/Windows/iconengines/qsvgicon.dll \
+    build/Windows/imageformats/qgif.dll \
+    build/Windows/imageformats/qicns.dll \
+    build/Windows/imageformats/qico.dll \
+    build/Windows/imageformats/qjpeg.dll \
+    build/Windows/imageformats/qsvg.dll \
+    build/Windows/imageformats/qtga.dll \
+    build/Windows/imageformats/qtiff.dll \
+    build/Windows/imageformats/qwbmp.dll \
+    build/Windows/imageformats/qwebp.dll \
+    build/Windows/libEGL.dll \
+    build/Windows/libGLESV2.dll \
+    build/Windows/opengl32sw.dll \
+    build/Windows/platforms/qwindows.dll

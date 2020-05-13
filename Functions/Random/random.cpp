@@ -1,6 +1,6 @@
 #include "random.h"
 
-static QString m_seedText = "test string";
+static QString m_seedText;
 
 Random::Random()
 {
