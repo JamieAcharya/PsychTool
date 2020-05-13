@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui opengl
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -16,16 +16,36 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    Algorithms/Algorithm2/algorithm_2.cpp \
+    Algorithms/Algorithm3/algorithm_3.cpp \
+    Functions/Random/random.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    menu.cpp \
+    psych.cpp
 
 HEADERS += \
-    mainwindow.h
+    Algorithms/Algorithm1/Algorithm_1.h \
+    Algorithms/Algorithm2/algorithm_2.h \
+    Algorithms/Algorithm3/algorithm_3.h \
+    Functions/Random/random.h \
+    mainwindow.h \
+    menu.h \
+    psych.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    menu.ui
 
+#LIBS += opengl32.lib
+#LIBS += glu32.lib
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    Algorithms/Algorithm2/Algorithm_2.frag \
+    Algorithms/Algorithm2/Algorithm_2.vert \
+    Algorithms/Algorithm3/Algorithm_3.frag \
+    Algorithms/Algorithm3/Algorithm_3.vert

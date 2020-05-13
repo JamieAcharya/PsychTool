@@ -1,7 +1,8 @@
-uniform sampler2D qt_Texture0;
-varying vec4 qt_TexCoord0;
+#version 450 core
+
+in vec4 v_colour;
 
 void main(void)
 {
-    gl_FragColor = texture2D(qt_Texture0, qt_TexCoord0.st);
+    gl_FragColor = v_colour;
 }
