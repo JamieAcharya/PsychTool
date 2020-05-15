@@ -55,6 +55,8 @@ private slots:
 
     void on_button_generate_randomShape_clicked();
 
+    void on_Button_save_AlgoValues_clicked();
+
 private:
     Ui::Menu *ui;
 };

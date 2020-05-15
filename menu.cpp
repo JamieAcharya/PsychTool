@@ -1,5 +1,6 @@
 #include "menu.h"
 #include "ui_menu.h"
+#include <QTextStream>
 #include <QDebug>
 
 
@@ -101,4 +102,23 @@ void Menu::on_button_generate_randomNumbers_clicked()
 void Menu::on_button_generate_randomShape_clicked()
 {
     ui->comboBox_shapeType->setCurrentIndex(int(r_shapeType(rng)));
+}
+
+void Menu::on_Button_save_AlgoValues_clicked()
+{
+    QString fileName = QFileDialog::getSaveFileName(this, tr("Save File"), "", tr("File Type (*.txt)"));
+        if (fileName != "") {
+            QFile file(fileName);
+
+            if (file.open(QIODevice::ReadWrite)) {
+                QTextStream stream(&file);
+                stream << ui->plainTextEdit->toPlainText();
+                file.flush();
+                file.close();
+            }
+            else {
+                QMessageBox::critical(this, tr("Error"), tr("Cannot save file!"));
+                return;
+            }
+        }
 }
